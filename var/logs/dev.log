@@ -1,0 +1,7 @@
+[2016-05-16 22:36:25] php.DEBUG: unlink(web/bundles/framework): No such file or directory {"type":2,"file":"/var/www/html/curso-symfony2/proyecto1/vendor/symfony/symfony/src/Symfony/Component/Filesystem/Filesystem.php","line":178,"level":28928} []
+[2016-05-17 00:53:38] request.INFO: Matched route "homepage". {"route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://192.168.33.42/curso-symfony2/proyecto1/web/app_dev.php/"} []
+[2016-05-17 00:53:38] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-05-17 00:53:39] request.INFO: Matched route "_wdt". {"route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"4e2fde","_route":"_wdt"},"request_uri":"http://192.168.33.42/curso-symfony2/proyecto1/web/app_dev.php/_wdt/4e2fde"} []
+[2016-05-17 01:10:55] request.INFO: Matched route "homepage". {"route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://symfony.cl/app_dev.php/"} []
+[2016-05-17 01:10:55] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-05-17 01:10:56] request.INFO: Matched route "_wdt". {"route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"6499f9","_route":"_wdt"},"request_uri":"http://symfony.cl/app_dev.php/_wdt/6499f9"} []

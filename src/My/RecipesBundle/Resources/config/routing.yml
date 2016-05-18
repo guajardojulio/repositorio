@@ -1,0 +1,3 @@
+my_recipes_homepage:
+    path:     /
+    defaults: { _controller: MyRecipesBundle:Default:index }
