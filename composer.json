@@ -1,8 +1,14 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "AgendaMedica",
+	"description":"Mi primer proyecto symfony",
+	"authors":[
+			"name":"Julio Guajardo Herrera",
+			"email":"guajardo.julio@gmail.com",
+			"role":"Developer"
+	],
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Agenda Medica",
     "autoload": {
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
