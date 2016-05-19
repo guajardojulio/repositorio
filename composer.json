@@ -1,14 +1,15 @@
 {
     "name": "AgendaMedica",
-	"description":"Mi primer proyecto symfony",
-	"authors":[
-			"name":"Julio Guajardo Herrera",
-			"email":"guajardo.julio@gmail.com",
-			"role":"Developer"
-	],
     "license": "MIT",
     "type": "project",
     "description": "Agenda Medica",
+	"authors":[
+		{
+			"name":"Julio Guajardo Herrera",
+			"email":"guajardo.julio@gmail.com",
+			"role":"Developer"
+		}	
+	],	
     "autoload": {
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
