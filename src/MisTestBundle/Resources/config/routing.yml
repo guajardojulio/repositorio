@@ -1,0 +1,7 @@
+mis_test_homepage:
+    path:     /
+    defaults: { _controller: MisTestBundle:Default:index }
+
+hola:
+    path:     /hola/{name}
+    defaults: { _controller: MisTestBundle:Hola:index }

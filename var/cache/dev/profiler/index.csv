@@ -1,2 +1,6 @@
 4e2fde,192.168.71.18,GET,http://192.168.33.42/curso-symfony2/proyecto1/web/app_dev.php/,1463457218,,200
 6499f9,192.168.71.18,GET,http://symfony.cl/app_dev.php/,1463458255,,200
+9d5bd3,10.1.1.51,GET,http://symfony.cl/app_dev.php/hola/julio,1464354941,,200
+273a0e,10.1.1.51,GET,http://symfony.cl/app_dev.php/hola/julio,1464354947,,200
+4a3c43,10.1.1.51,GET,http://symfony.cl/app_dev.php/hola/julio,1464354995,,200
+fc6354,10.1.1.51,GET,http://symfony.cl/app_dev.php/hola/julio,1464355089,,200

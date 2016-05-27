@@ -1,3 +1,7 @@
+mis_test:
+    resource: "@MisTestBundle/Resources/config/routing.yml"
+    prefix:   /
+
 my_recipes:
     resource: "@MyRecipesBundle/Resources/config/routing.yml"
     prefix:   /

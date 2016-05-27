@@ -27,6 +27,29 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         $context = $this->context;
         $request = $this->request;
 
+        // mis_test_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'mis_test_homepage');
+            }
+
+            return array (  '_controller' => 'MisTestBundle\\Controller\\DefaultController::indexAction',  '_route' => 'mis_test_homepage',);
+        }
+
+        // hola
+        if (0 === strpos($pathinfo, '/hola') && preg_match('#^/hola/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'hola')), array (  '_controller' => 'MisTestBundle\\Controller\\HolaController::indexAction',));
+        }
+
+        // my_recipes_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'my_recipes_homepage');
+            }
+
+            return array (  '_controller' => 'My\\RecipesBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_recipes_homepage',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
