@@ -41,6 +41,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'hola')), array (  '_controller' => 'MisTestBundle\\Controller\\HolaController::indexAction',));
         }
 
+        // recetas
+        if (0 === strpos($pathinfo, '/recetas') && preg_match('#^/recetas/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'recetas')), array (  '_controller' => 'MisTestBundle\\Controller\\RecetasController::indexAction',));
+        }
+
         // my_recipes_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

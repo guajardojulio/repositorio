@@ -5,3 +5,13 @@ mis_test_homepage:
 hola:
     path:     /hola/{name}
     defaults: { _controller: MisTestBundle:Hola:index }
+
+recetas_listar:
+    path:     /recetas/{id}
+    defaults: { _controller: MisTestBundle:Recetas:listar, id: 1 }
+    requirements:
+        id: \d+
+
+recetas_mostrar:
+    path:     /recetas/{name}
+    defaults: { _controller: MisTestBundle:Recetas:mostrar }
