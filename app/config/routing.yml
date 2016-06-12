@@ -1,3 +1,7 @@
+acme_store:
+    resource: "@AcmeStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
 mis_test:
     resource: "@MisTestBundle/Resources/config/routing.yml"
     prefix:   /

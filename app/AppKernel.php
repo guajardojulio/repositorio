@@ -18,6 +18,9 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new My\RecipesBundle\MyRecipesBundle(),
             new MisTestBundle\MisTestBundle(),
+            new Acme\StoreBundle\AcmeStoreBundle(),
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

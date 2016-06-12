@@ -1,0 +1,11 @@
+acme_store_homepage:
+    path:     /
+    defaults: { _controller: AcmeStoreBundle:Default:index }
+
+create:
+    path:     /test1/{id}
+    defaults: { _controller: AcmeStoreBundle:Default:create }
+
+listar:
+    path:     /test2/{id}
+    defaults: { _controller: AcmeStoreBundle:Default:listar }

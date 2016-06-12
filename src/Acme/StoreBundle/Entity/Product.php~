@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Created by PhpStorm.
+ * User: Julio Guajardo
+ * Date: 05/06/2016
+ * Time: 13:13
+ */
+namespace Acme\StoreBundle\Entity;
+
+class Product
+{
+    protected $name;
+
+    protected $price;
+
+    protected $description;
+}

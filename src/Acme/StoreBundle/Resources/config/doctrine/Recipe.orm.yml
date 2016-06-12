@@ -1,0 +1,23 @@
+# src/Acme/StoreBundle/Resources/config/doctrine/Product.orm.yml
+Acme\StoreBundle\Entity\Recipe:
+    type: entity
+    table: recipes
+    manyToOne:
+      author:
+        targetEntity: Author
+        joinColumn:
+          name: author_id
+          referencedColumnName: id
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 255
+        difficulty:
+            type: string
+            length: 40
+        description:
+            type: text

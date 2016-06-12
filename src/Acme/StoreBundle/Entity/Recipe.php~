@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Julio Guajardo
+ * Date: 08/06/2016
+ * Time: 0:23
+ */
+
+namespace Acme\StoreBundle\Entity;
+
+
+class Recipe
+{
+    private $id;
+    protected $name;
+    protected $difficulty;
+    protected $description;
+
+}
