@@ -9,3 +9,7 @@ create:
 listar:
     path:     /test2/{id}
     defaults: { _controller: AcmeStoreBundle:Default:listar }
+
+vista:
+    path:     /vista
+    defaults: { _controller: AcmeStoreBundle:Default:index }

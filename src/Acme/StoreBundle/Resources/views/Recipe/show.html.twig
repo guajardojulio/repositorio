@@ -1,0 +1,12 @@
+{%  extends '::base.html.twig' %}
+{%  block title %}{{ recipe.getName() }}{% endblock %}
+{% block body %}
+    <h1>{{ recipe.getName() }}</h1>
+
+    <h3>Ingredientes</h3>
+
+{% endblock %}
+{% block mibloque %}
+    {{ parent() }}
+    <p>Contenido a añadir</p>
+{% endblock %}
