@@ -1,0 +1,17 @@
+{%  extends '::base.html.twig' %}
+{%  block title %}{{ app.debug  }}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Menú</div>
+            <div class="panel-body">
+                <h1>Recetas Disponibles.</h1>
+
+                    {% for a in recipe %}
+                        <ul>{{ a.name }}</ul>
+                    {% endfor %}
+            </div>
+            <div class="panel-footer">{{ contact_email  }}</div>
+        </div>
+    </div>
+{% endblock %}

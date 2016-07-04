@@ -1,0 +1,21 @@
+{%  extends 'AcmeStoreBundle::index.html.twig' %}
+{% block body %}
+    <h1>{{ go_email  }}</h1>
+    <h2> recipe.name </h2>
+    <h3>Ingredientes</h3>
+        {% for a in recipe %}
+            <ul>{{ a.name }}</ul>
+        {% endfor %}
+
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">RECETAS</div>
+                <div class="panel-body">
+                        {% for a in recipe %}
+            <ul>{{ a.name }}</ul>
+        {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

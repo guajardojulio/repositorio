@@ -12,9 +12,10 @@ class DefaultController extends Controller
     {
         //return $this->render('AcmeStoreBundle:Default:index.html.twig');
         $repository = $this->getDoctrine()->getRepository('AcmeStoreBundle:Recipe');
-        $recipe=$repository->find(4);
+        $recipe=$repository->findAll();
         //  return new Response($recipe->getName());
-        return $this->render('AcmeStoreBundle:Recipe:show.html.twig',array($recipe));
+        return $this->render('AcmeStoreBundle:Recipe:layout.html.twig',
+            array('recipe' => $recipe));
     }
 
     /*public function createAction()

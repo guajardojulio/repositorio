@@ -1,10 +1,12 @@
 {%  extends '::base.html.twig' %}
-{%  block title %}{{ recipe.getName() }}{% endblock %}
+{%  block title %}{{ app.debug  }}{% endblock %}
 {% block body %}
-    <h1>{{ recipe.getName() }}</h1>
-
+    <h1>{{ go_email  }}</h1>
+    <h2> recipe.name </h2>
     <h3>Ingredientes</h3>
-
+        {% for a in recipe %}
+            <ul>{{ a.name }}</ul>
+        {% endfor %}
 {% endblock %}
 {% block mibloque %}
     {{ parent() }}

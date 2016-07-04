@@ -3,11 +3,17 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link href="{{ asset('public/css/bootstrap.jgh.css') }}" rel="stylesheet"/>
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {% block javascripts %}
+            <script  type="text/javascript" src="{{ asset('public/js/jquery.jgh.js') }}"></script>
+            <script  type="text/javascript" src="{{ asset('public/js/bootstrap.min.jgh.js') }}"></script>
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
     </body>
 </html>

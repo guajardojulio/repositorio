@@ -1,0 +1,13 @@
+{%  extends '::base.html.twig' %}
+{%  block title %}{{ recipe.name }}{% endblock %}
+{% block body %}
+    <h1>{{ recipe.name }}</h1>
+    <h2>Por {{ recipe.author }}</h2>
+    <p>{{ recipe.description }}</p>
+    <h3>Ingredientes</h3>
+
+{% endblock %}
+{% block mibloque %}
+    {{ parent() }}
+        <p>Contenido a añadir</p>
+{% endblock %}

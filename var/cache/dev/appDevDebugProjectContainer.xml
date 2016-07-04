@@ -1503,7 +1503,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>575b2503b3b3e0.07368732</argument>
+            <argument>5779b814700372.60296820</argument>
           </service>
         </argument>
       </argument>
@@ -1632,7 +1632,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>575b2503b3b3e0.07368732</argument>
+            <argument>5779b814700372.60296820</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -1857,6 +1857,10 @@
             </call>
           </service>
         </argument>
+      </call>
+      <call method="addGlobal">
+        <argument>contact_email</argument>
+        <argument>guajardo.julio@gmail.com</argument>
       </call>
       <configurator method="configure">
         <service class="Symfony\Bundle\TwigBundle\DependencyInjection\Configurator\EnvironmentConfigurator" public="false">

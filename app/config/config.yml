@@ -38,6 +38,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+      contact_email: guajardo.julio@gmail.com
 
 # Doctrine Configuration
 doctrine:
