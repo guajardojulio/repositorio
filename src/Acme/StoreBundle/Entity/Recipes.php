@@ -5,12 +5,12 @@ namespace Acme\StoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Product
+ * Recipes
  *
- * @ORM\Table(name="product")
+ * @ORM\Table(name="recipes", indexes={@ORM\Index(name="IDX_A369E2B5F675F31B", columns={"author_id"})})
  * @ORM\Entity
  */
-class Product
+class Recipes
 {
     /**
      * @var integer
@@ -24,16 +24,16 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=100, nullable=false)
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="price", type="decimal", precision=10, scale=2, nullable=false)
+     * @ORM\Column(name="difficulty", type="string", length=40, nullable=false)
      */
-    private $price;
+    private $difficulty;
 
     /**
      * @var string
@@ -41,6 +41,16 @@ class Product
      * @ORM\Column(name="description", type="text", nullable=false)
      */
     private $description;
+
+    /**
+     * @var \Authors
+     *
+     * @ORM\ManyToOne(targetEntity="Authors")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="author_id", referencedColumnName="id")
+     * })
+     */
+    private $author;
 
 
 }

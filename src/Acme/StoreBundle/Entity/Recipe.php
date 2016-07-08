@@ -99,4 +99,28 @@ class Recipe
     {
         return $this->description;
     }
+
+    /**
+     * Set author
+     *
+     * @param \Acme\StoreBundle\Entity\Author $author
+     *
+     * @return Recipe
+     */
+    public function setAuthor(\Acme\StoreBundle\Entity\Author $author = null)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return \Acme\StoreBundle\Entity\Author
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
 }

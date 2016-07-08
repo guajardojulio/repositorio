@@ -1,0 +1,73 @@
+Paciente:
+    type: entity
+    table: paciente
+    indexes:
+        id_comuna:
+            columns:
+                - id_comuna
+                - id_prevision
+    id:
+        idPaciente:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_paciente
+            generator:
+                strategy: IDENTITY
+    fields:
+        rut:
+            type: string
+            nullable: false
+            length: 12
+            options:
+                fixed: false
+        nombreCompleto:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: nombre_completo
+        direccion:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        idComuna:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_comuna
+        idPrevision:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_prevision
+        telefono:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        celular:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+        fechaNacimiento:
+            type: date
+            nullable: false
+            column: fecha_nacimiento
+    lifecycleCallbacks: {  }

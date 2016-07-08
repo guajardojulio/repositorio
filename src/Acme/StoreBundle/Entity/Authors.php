@@ -5,12 +5,12 @@ namespace Acme\StoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Product
+ * Authors
  *
- * @ORM\Table(name="product")
+ * @ORM\Table(name="authors")
  * @ORM\Entity
  */
-class Product
+class Authors
 {
     /**
      * @var integer
@@ -24,23 +24,16 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=100, nullable=false)
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="price", type="decimal", precision=10, scale=2, nullable=false)
+     * @ORM\Column(name="surname", type="string", length=255, nullable=false)
      */
-    private $price;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="text", nullable=false)
-     */
-    private $description;
+    private $surname;
 
 
 }

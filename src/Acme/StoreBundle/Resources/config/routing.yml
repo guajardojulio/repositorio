@@ -2,6 +2,10 @@ acme_store_homepage:
     path:     /
     defaults: { _controller: AcmeStoreBundle:Default:index }
 
+my_recipes_author_create:
+    path: /authors/create
+    defaults: { _controller: AcmeStoreBundle:Author:create }
+
 create:
     path:     /test1/{id}
     defaults: { _controller: AcmeStoreBundle:Default:create }

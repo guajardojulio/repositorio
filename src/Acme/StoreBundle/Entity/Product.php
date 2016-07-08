@@ -1,24 +1,47 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Julio Guajardo
- * Date: 05/06/2016
- * Time: 13:13
- */
 namespace Acme\StoreBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Product
+ *
+ * @ORM\Table(name="product")
+ * @ORM\Entity
+ */
 class Product
 {
-    protected $name;
-
-    protected $price;
-
-    protected $description;
     /**
      * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="price", type="decimal", precision=10, scale=2, nullable=false)
+     */
+    private $price;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=false)
+     */
+    private $description;
+
 
 
     /**

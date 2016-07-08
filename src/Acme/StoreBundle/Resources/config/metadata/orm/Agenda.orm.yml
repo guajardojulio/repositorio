@@ -1,0 +1,39 @@
+Agenda:
+    type: entity
+    table: agenda
+    indexes:
+        id_paciente:
+            columns:
+                - id_paciente
+    id:
+        idAgenda:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_agenda
+            generator:
+                strategy: IDENTITY
+    fields:
+        idPaciente:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_paciente
+        fecha:
+            type: date
+            nullable: false
+        hora:
+            type: time
+            nullable: false
+        estado:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                comment: '''Disponible'',''Tomada'',''Confirmado'',''Anulada'''
+                default: Disponible
+    lifecycleCallbacks: {  }

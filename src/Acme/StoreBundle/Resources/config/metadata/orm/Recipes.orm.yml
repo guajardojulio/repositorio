@@ -1,0 +1,47 @@
+Recipes:
+    type: entity
+    table: recipes
+    indexes:
+        IDX_A369E2B5F675F31B:
+            columns:
+                - author_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        difficulty:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+        description:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+    manyToOne:
+        author:
+            targetEntity: Authors
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                author_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

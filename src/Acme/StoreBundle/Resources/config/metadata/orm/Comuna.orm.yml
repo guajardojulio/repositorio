@@ -1,0 +1,22 @@
+Comuna:
+    type: entity
+    table: comuna
+    id:
+        idComuna:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_comuna
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombreComuna:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: nombre_comuna
+    lifecycleCallbacks: {  }
